@@ -11,9 +11,7 @@ const UserLogin = (props) => {
 
     const handleChanges = e => {
         setCredentials({...credentials, [e.target.name]:e.target.value})
-        //  setPassword({...password, [e.target.name]:e.target.value})
     }
-
     console.log('username', credentials)
     console.log('password', password)
 
@@ -32,7 +30,7 @@ const UserLogin = (props) => {
     };
 
     return(
-        <>
+        <div>
             <form onSubmit={login}>
                 <input
                     type='text'
@@ -48,8 +46,7 @@ const UserLogin = (props) => {
                 />
                 <button>Login</button>
             </form>
-        </>
-    )
+        </div>)
 }
 
 export default UserLogin
