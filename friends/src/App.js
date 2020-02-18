@@ -8,7 +8,16 @@ import Public from './Components/Public';
 import ProtectedRoute from './Components/ProtectedRoute';
 import UserPage from './Components/User/UserPage'
 
+import styled from 'styled-components';
+
 function App() {
+
+  const Wrapper = styled.div`
+        background-image: url('https://images.unsplash.com/photo-1508163223045-1880bc36e222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80');
+        background-position: center;
+        background-repeat: no-repeat;
+    `
+
   return (
     <div className="App">
       <nav>

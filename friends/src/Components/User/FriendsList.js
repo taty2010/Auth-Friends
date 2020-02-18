@@ -42,7 +42,7 @@ const FriendsList = (props) => {
         <div>
             <CreateFriend newFriends={newFriends} handleChanges={handleChanges} addNewFriends={addNewFriends} list={friends}/>
             <h1>Friends List</h1>
-            {isFetching ? (
+            {props.isFetchingData ? (
                 <h1>LOADING!!!!</h1>
             ) : (props.friends.map(list => {
                 return <Friends friend={list} />
@@ -57,7 +57,8 @@ const mapStateToProps = state => {
     console.log('mapstatetoprops', state)
     return{
         friends: state.friends,
-        error: state.error
+        error: state.error,
+        isFetchingData: state.isFetchingData
     }
 }
 
