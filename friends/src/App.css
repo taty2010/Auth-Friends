@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
+
+.loginWrapper form{
+  display: flex;
+  flex-flow: column;
+  width: 20vw;
+}
+
+form input{
+  margin: 2%;
+}
+
+form button{
+  width: 15vw;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.loginWrapper i {
+  font-size: 10vw;
+}
+
+.addFriends form input{
+  margin: 2%;
+  border-radius: 5px;
+  border: none;
+  padding: 1%;
+}
+
+.createForm form{
+  display: flex;
+  justify-content: center;
+  width: 95vw;
+  align-items: center;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  margin: 2%;
+}
+
+nav a {
+  padding: 0 2%;
+  font-family: 'Fredoka One', cursive;
+  text-decoration: none;
+}
+
+nav a:active{
+  color: #494c5c;;
+}
+
+nav a:visited{
+  color: #494c5c;;
+}
