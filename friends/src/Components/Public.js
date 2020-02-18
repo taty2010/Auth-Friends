@@ -48,7 +48,8 @@ const Public = () => {
     return(
         <Wrapper>
             <Bg/>
-            <Form>
+            <Form className='loginWrapper'>
+            <i class="fas fa-user-astronaut"></i>
             <h1>Welcome!</h1>
             <p>Please Sign into your profile</p>
             <UserLogin/>

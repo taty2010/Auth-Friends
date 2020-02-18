@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
+import styled from 'styled-components'
+
 const CreateFriend = (props) => {
 
     // const [friends, setFriends] = ({
@@ -22,8 +24,26 @@ const CreateFriend = (props) => {
     //         })
     // }
 
+    const Button = styled.button`
+        border-radius: 25px;
+        padding: 1%;
+        background-image: linear-gradient(45deg, #9e678e, #78bee2);
+        color: white;
+        border: none;
+        font-family: 'Fredoka One', cursive;
+        border: 1px solid white;
+        margin: 0 auto;
+
+    `;
+
+    const Wrapper = styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `;
+
     return(
-        <div>
+        <Wrapper className='createForm'>
             <form onSubmit={props.addNewFriends}>
                 <input
                     name='name'
@@ -46,9 +66,9 @@ const CreateFriend = (props) => {
                     onChange={props.handleChanges}
                     value={props.newFriends.email}
                 />
-                <button>Add Friend</button>
+                <Button>Add Friend</Button>
             </form>
-        </div>
+        </Wrapper>
     )
 }
 

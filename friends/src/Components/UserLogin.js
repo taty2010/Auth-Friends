@@ -1,7 +1,9 @@
 import React, {useState} from 'react';
 import {axiosWithAuth} from './axiosWithAuth';
 
+
 const UserLogin = (props) => {
+
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
      const [credentials, setCredentials] = useState({
@@ -9,10 +11,11 @@ const UserLogin = (props) => {
         password: password
      })
 
+     console.log('history', props)
     const handleChanges = e => {
         setCredentials({...credentials, [e.target.name]:e.target.value})
     }
-    console.log('username', credentials)
+    console.log('username', credentials.username)
     console.log('password', password)
 
     const login = e => {
@@ -21,7 +24,7 @@ const UserLogin = (props) => {
             .post('/login', credentials)
             .then(res => {
                 localStorage.setItem('token', res.data.payload)
-                props.history.push('/protected');
+                // props.history.push('/protected');
             })
             .catch(err => {
                 localStorage.removeItem('token');

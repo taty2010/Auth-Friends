@@ -5,6 +5,7 @@ import CreateFriend from './CreateFriend'
 
 import {addFriends, getFriends} from '../User/actions/action';
 import {connect} from 'react-redux';
+import styled from 'styled-components';
 
 const FriendsList = (props) => {
 
@@ -37,19 +38,42 @@ const FriendsList = (props) => {
         setNewFriends({...newFriends, [e.target.name]:e.target.value})
     }
 
+    const Wrapper = styled.div`
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    h1{
+        color: white;
+    }
+    `
+
+    const FriendsWrapper = styled.div`
+        // background-color: pink;
+        width: 95vw;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    `
+
 
     return(
-        <div>
+        <Wrapper className='addFriends'>
             <CreateFriend newFriends={newFriends} handleChanges={handleChanges} addNewFriends={addNewFriends} list={friends}/>
             <h1>Friends List</h1>
+            <FriendsWrapper>
             {props.isFetchingData ? (
                 <h1>LOADING!!!!</h1>
-            ) : (props.friends.map(list => {
+            ) : (
+                props.friends.map(list => {
                 return <Friends friend={list} />
             })
             )
             }
-        </div>
+            </FriendsWrapper>
+        </Wrapper>
     )
 }
 
