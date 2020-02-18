@@ -4,7 +4,11 @@ const Friends = ({friend}) =>{
     
 
 return(
-    <h1>{friend.name}</h1>
+    <div>
+        <h1>Name: {friend.name}</h1>
+        <h2>Age: {friend.age}</h2>
+        <h3>Email: {friend.email}</h3>
+    </div>
     )
 }
 
