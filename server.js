@@ -48,6 +48,7 @@ let friends = [
   }
 ];
 
+
 app.use(bodyParser.json());
 
 app.use(cors());
@@ -133,3 +134,11 @@ function getNextId() {
 app.listen(port, () => {
   console.log(`server listening on port ${port}`);
 });
+
+module.exports = (req, res) => {
+  res.json({
+    body: req.body,
+    query: req.query,
+    cookies: req.cookies
+  })
+}
