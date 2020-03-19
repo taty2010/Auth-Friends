@@ -24,7 +24,7 @@ const UserLogin = (props) => {
             .post('/login', credentials)
             .then(res => {
                 localStorage.setItem('token', res.data.payload)
-                // props.history.push('/protected');
+                 props.history.push('/protected');
             })
             .catch(err => {
                 localStorage.removeItem('token');

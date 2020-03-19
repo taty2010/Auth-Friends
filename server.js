@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const port = 5000;
+const port = process.env.PORT;
 const app = express();
 const token =
   'esfeyJ1c2VySWQiOiJiMDhmODZhZi0zNWRhLTQ4ZjItOGZhYi1jZWYzOTA0NUIhkufemQifQ';
@@ -46,6 +47,7 @@ let friends = [
     email: 'phoebe@friends.com'
   }
 ];
+
 
 app.use(bodyParser.json());
 
@@ -132,3 +134,11 @@ function getNextId() {
 app.listen(port, () => {
   console.log(`server listening on port ${port}`);
 });
+
+module.exports = (req, res) => {
+  res.json({
+    body: req.body,
+    query: req.query,
+    cookies: req.cookies
+  })
+}

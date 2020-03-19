@@ -3,8 +3,8 @@ import UserLogin from './UserLogin'
 
 import styled from 'styled-components'
 
-const Public = () => {
-
+const Public = (props) => {
+console.log('public',props)
     const Wrapper = styled.div`
         // background-image: url('https://images.unsplash.com/photo-1508163223045-1880bc36e222?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80');
         // background-position: center;
@@ -52,7 +52,7 @@ const Public = () => {
             <i class="fas fa-user-astronaut"></i>
             <h1>Welcome!</h1>
             <p>Please Sign into your profile</p>
-            <UserLogin/>
+            <UserLogin history={props.history}/>
             </Form>
         </Wrapper>
     )
