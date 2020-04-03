@@ -8,6 +8,6 @@ export const axiosWithAuth = () => {
         headers: {
             Authorization: token
         },
-        baseURL: 'http://localhost:4002/api'
+        baseURL: 'https://lambda-friends.herokuapp.com/api'
     });
 };
