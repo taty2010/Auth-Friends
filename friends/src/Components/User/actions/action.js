@@ -12,7 +12,7 @@ export const getFriends = () => dispatch => {
     axiosWithAuth()
       .get('/friends')
       .then(res => {
-          console.log(res.data)
+        //   console.log(res.data)
           dispatch({type: UPDATE, payload:res.data})
       })
       .catch(err => {
@@ -21,7 +21,7 @@ export const getFriends = () => dispatch => {
 }
 
 export const addFriends = (add) => dispatch => {
-    console.log('add', add)
+    // console.log('add', add)
     dispatch({type: POST_FRIENDS});
     axiosWithAuth()
         .post('/friends',

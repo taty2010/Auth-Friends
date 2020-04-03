@@ -11,12 +11,12 @@ const UserLogin = (props) => {
         password: password
      })
 
-     console.log('history', props)
+    //  console.log('history', props)
     const handleChanges = e => {
         setCredentials({...credentials, [e.target.name]:e.target.value})
     }
-    console.log('username', credentials.username)
-    console.log('password', password)
+    // console.log('username', credentials.username)
+    // console.log('password', password)
 
     const login = e => {
         e.preventDefault()

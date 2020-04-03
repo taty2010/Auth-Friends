@@ -56,6 +56,9 @@ const FriendsList = (props) => {
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
+        @media only screen and (max-width: 600px){
+            flex-flow: column;
+        }
 
     `
 
@@ -79,7 +82,7 @@ const FriendsList = (props) => {
 }
 
 const mapStateToProps = state => {
-    console.log('mapstatetoprops', state)
+    // console.log('mapstatetoprops', state)
     return{
         friends: state.friends,
         error: state.error,

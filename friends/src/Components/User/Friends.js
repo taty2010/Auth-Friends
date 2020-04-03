@@ -16,6 +16,9 @@ const Block = styled.div`
     align-items:center;
     margin: 2%;
     box-shadow: 5px 5px 3px 1px #3f3b48c9;
+    @media only screen and (max-width: 600px){
+        width: 55vw;
+    }
     :hover{
         transform: scale(1.2)
     }
